@@ -12,6 +12,8 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class Main extends JFrame {
 	
+	public static GlobalVals vals;
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -29,6 +31,7 @@ public class Main extends JFrame {
 	 * Create the application.
 	 */
 	public Main() {
+		vals = new GlobalVals();
 		initialize();
 	}
 

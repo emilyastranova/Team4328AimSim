@@ -22,12 +22,9 @@ public class DisplayPanel extends JPanel implements MouseMotionListener, ActionL
 	int mouseX = 100;
 	int mouseY = 100;
 
-	private BufferedImage image;
-
 	public DisplayPanel() {
 		setLayout(null);
 		setBounds(0, 0, 1264, 578);
-		loadImages();
 		addMouseMotionListener(this);
 		loop.start();
 
@@ -41,15 +38,6 @@ public class DisplayPanel extends JPanel implements MouseMotionListener, ActionL
 		int y = (int) robot.getCoordinates().getY();
 		g.drawImage(robot.image, x, y, 100, 120, this);
 	}
-
-	public void loadImages() {
-		try {
-			image = ImageIO.read(new File("resources/ShootingRobot.png"));
-		} catch (IOException ex) {
-			System.err.println(ex.getMessage());
-		}
-	}
-
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -65,6 +53,10 @@ public class DisplayPanel extends JPanel implements MouseMotionListener, ActionL
 		// TODO Auto-generated method stub
 		mouseX = e.getX();
 		mouseY = e.getY();
+		
+		Main.vals.setRobotPosX(mouseX);
+		Main.vals.setRobotPosY(mouseY);
+		
 	}
 
 	@Override
@@ -72,5 +64,5 @@ public class DisplayPanel extends JPanel implements MouseMotionListener, ActionL
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 }
