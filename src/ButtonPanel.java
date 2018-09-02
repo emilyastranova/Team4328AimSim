@@ -102,7 +102,7 @@ public class ButtonPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if(e.getSource() == loop) {
 			xPosField.setText("Pos X: " + Main.vals.getRobotPosX());
-			yPosField.setText("Y Pos: " + Main.vals.getRobotPosY());
+			yPosField.setText("Pos Y: " + Main.vals.getRobotPosY());
 		}
 	}
 
