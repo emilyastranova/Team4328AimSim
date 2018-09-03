@@ -1,8 +1,11 @@
+import java.util.ArrayList;
 
 public class GlobalVals {
 
 	int robotPosX = 0;
 	int robotPosY = 0;
+	
+	static ArrayList<Ball> balls = new ArrayList<Ball>();
 	
 	public GlobalVals() {
 		
@@ -24,6 +27,13 @@ public class GlobalVals {
 		this.robotPosY = robotPosy;
 	}
 
+	public static ArrayList<Ball> getBalls() {
+		return balls;
+	}
+	
+	public static void addBall(Ball b) {
+		balls.add(b);
+	}
 
 	
 }

@@ -32,6 +32,7 @@ public class Main extends JFrame {
 	 */
 	public Main() {
 		vals = new GlobalVals();
+		new PhysicsUpdate();
 		initialize();
 	}
 
