@@ -8,7 +8,12 @@ public class PhysicsUpdate implements ActionListener {
 	Timer loop = new Timer(10,this);
 	
 	public PhysicsUpdate() {
-		loop.start();
+		new Thread() {
+			public void run() {
+				loop.start();
+				
+			}
+		}.start();;
 	}
 
 	@Override
