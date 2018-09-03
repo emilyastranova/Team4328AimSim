@@ -2,8 +2,8 @@ import java.awt.Color;
 
 public class Ball {
 
-	int x = 0;
-	int y = 0;
+	double x = 0;
+	double y = 0;
 	Color c = null;
 	
 	public Ball(int x, int y, Color c) {
@@ -14,19 +14,19 @@ public class Ball {
 		System.out.println("Ball created at: " + x +", " + y);
 	}
 
-	public int getX() {
+	public double getX() {
 		return x;
 	}
 
-	public void setX(int x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 
-	public int getY() {
+	public double getY() {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 	

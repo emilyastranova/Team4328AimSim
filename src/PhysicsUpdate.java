@@ -6,6 +6,8 @@ import javax.swing.Timer;
 public class PhysicsUpdate implements ActionListener {
 
 	Timer loop = new Timer(10,this);
+	double angle = 0;
+	double speed = 1;
 	
 	public PhysicsUpdate() {
 		new Thread() {
@@ -25,10 +27,10 @@ public class PhysicsUpdate implements ActionListener {
 	public void updateBalls() {
 		for(int x = 0; x < GlobalVals.getBalls().size(); x++) {
 			Ball tempBall = GlobalVals.getBalls().get(x);
-			int tempX = tempBall.getX();
-			int tempY = tempBall.getY();
-			tempBall.setX(tempX+10);
-			tempBall.setY(tempY-5);
+			double tempX = tempBall.getX();
+			double tempY = tempBall.getY();
+			tempBall.setX(tempX+Math.cos(Math.toRadians(angle))*speed);
+			tempBall.setY(tempY-Math.sin(Math.toRadians(angle))*speed);
 		}
 	}
 	

@@ -58,7 +58,7 @@ public class DisplayPanel extends JPanel implements MouseMotionListener, ActionL
 		// draw balls
 		for (int i = 0; i < GlobalVals.getBalls().size(); i++) {
 			g.setColor(GlobalVals.getBalls().get(i).c);
-			g.fillOval(GlobalVals.getBalls().get(i).getX(), GlobalVals.getBalls().get(i).getY(), 20, 20);
+			g.fillOval((int)GlobalVals.getBalls().get(i).getX(), (int)GlobalVals.getBalls().get(i).getY(), 20, 20);
 		}
 	}
 
