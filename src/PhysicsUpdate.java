@@ -24,7 +24,11 @@ public class PhysicsUpdate implements ActionListener {
 	
 	public void updateBalls() {
 		for(int x = 0; x < GlobalVals.getBalls().size(); x++) {
-			GlobalVals.getBalls().get(x).setX(GlobalVals.getBalls().get(x).getX()+10);
+			Ball tempBall = GlobalVals.getBalls().get(x);
+			int tempX = tempBall.getX();
+			int tempY = tempBall.getY();
+			tempBall.setX(tempX+10);
+			tempBall.setY(tempY-5);
 		}
 	}
 	
